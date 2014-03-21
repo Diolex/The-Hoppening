@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -16,6 +17,8 @@ public class TheHoppeningGame implements ApplicationListener {
 	private SpriteBatch batch;
 	private Texture texture;
 	private Sprite sprite;
+	private Animation animation;
+	
 	
 	@Override
 	public void create() {
@@ -26,7 +29,18 @@ public class TheHoppeningGame implements ApplicationListener {
 		camera = new OrthographicCamera(1, h/w);
 		batch = new SpriteBatch();
 		
-		texture = new Texture(Gdx.files.internal("data/b0.png"));
+		Texture w0 = new Texture(Gdx.files.internal("data/b0.png"));
+		Texture w1 = new Texture(Gdx.files.internal("data/b1.png"));
+		Texture w2 = new Texture(Gdx.files.internal("data/b2.png"));
+		Texture w3 = new Texture(Gdx.files.internal("data/b3.png"));
+		
+		Texture[] walk = new Texture[4];
+		walk[0] = w0;
+		walk[1] = w1;
+		walk[2] = w2;
+		walk[3] = w3;
+		Animation animation = new Animation(walk);
+		
 		texture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 		
 		TextureRegion region = new TextureRegion(texture, 0, 0, 100, 100);
