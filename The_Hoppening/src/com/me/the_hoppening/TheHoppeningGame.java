@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 
@@ -16,8 +17,9 @@ public class TheHoppeningGame implements ApplicationListener {
 	private OrthographicCamera camera;
 	private SpriteBatch batch;
 	private Texture texture;
-	private Sprite sprite;
 	private Animation animation;
+	private TextureAtlas bunnyAtlas;
+	private float elapsedTime = 0;
 	
 	
 	@Override
@@ -26,29 +28,10 @@ public class TheHoppeningGame implements ApplicationListener {
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
 		
-		camera = new OrthographicCamera(1, h/w);
+		//camera = new OrthographicCamera(1, h/w);
 		batch = new SpriteBatch();
-		
-		Texture w0 = new Texture(Gdx.files.internal("data/b0.png"));
-		Texture w1 = new Texture(Gdx.files.internal("data/b1.png"));
-		Texture w2 = new Texture(Gdx.files.internal("data/b2.png"));
-		Texture w3 = new Texture(Gdx.files.internal("data/b3.png"));
-		
-		Texture[] walk = new Texture[4];
-		walk[0] = w0;
-		walk[1] = w1;
-		walk[2] = w2;
-		walk[3] = w3;
-		Animation animation = new Animation(walk);
-		
-		texture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
-		
-		TextureRegion region = new TextureRegion(texture, 0, 0, 100, 100);
-		
-		sprite = new Sprite(region);
-		sprite.setSize(0.9f, 0.9f * sprite.getHeight() / sprite.getWidth());
-		sprite.setOrigin(sprite.getWidth()/2, sprite.getHeight()/2);
-		sprite.setPosition(-sprite.getWidth()/2, -sprite.getHeight()/2);
+		bunnyAtlas = new TextureAtlas(Gdx.files.internal("data/basedBunny.atlas"));
+		animation = new Animation(1/15f, bunnyAtlas.getRegions());
 	}
 
 	@Override
@@ -62,9 +45,12 @@ public class TheHoppeningGame implements ApplicationListener {
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		
-		batch.setProjectionMatrix(camera.combined);
+		//batch.setProjectionMatrix(camera.combined);
+		
 		batch.begin();
-		sprite.draw(batch);
+		//sprite.draw(batch);
+		elapsedTime += Gdx.graphics.getDeltaTime();
+		batch.draw(animation.getKeyFrame(elapsedTime, true), 0, 0);
 		batch.end();
 	}
 
