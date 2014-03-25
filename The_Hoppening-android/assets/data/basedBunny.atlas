@@ -1,0 +1,40 @@
+
+basedBunny.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+b0
+  rotate: false
+  xy: 2, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+b1
+  rotate: false
+  xy: 79, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+b2
+  rotate: false
+  xy: 156, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+b3
+  rotate: false
+  xy: 233, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+b4
+  rotate: false
+  xy: 310, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
