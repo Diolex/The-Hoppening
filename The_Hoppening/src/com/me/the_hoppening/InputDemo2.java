@@ -30,7 +30,8 @@ public class InputDemo2 implements ApplicationListener, InputProcessor {
     @Override
     public void create() {        
         batch = new SpriteBatch();    
-        font = new BitmapFont(Gdx.files.internal("data/arial-15.fnt"),false);
+        //font = new BitmapFont(Gdx.files.internal("data/arial-15.fnt"),false);
+        font = new BitmapFont();
         font.setColor(Color.RED);
         w = Gdx.graphics.getWidth();
         h = Gdx.graphics.getHeight();
