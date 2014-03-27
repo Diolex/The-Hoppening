@@ -14,28 +14,28 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.input.GestureDetector;
 import com.badlogic.gdx.input.GestureDetector.GestureListener;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 
 
 public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	private OrthographicCamera camera;
 	private SpriteBatch batch;
-	private Texture texture;
-	private Animation animation;
-	private TextureAtlas bunnyAtlas;
-	private float elapsedTime = 0;
-	
+
+
+	//private float elapsedTime = 0;
+	private Stage stage;
 	
 	@Override
 	public void create() {
-	    camera = new OrthographicCamera(1280, 720);
+	    stage = new Stage();
+		camera = new OrthographicCamera(1280, 720);
 		Texture.setEnforcePotImages(false);
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
 		
 		//camera = new OrthographicCamera(1, h/w);
 		batch = new SpriteBatch();
-		bunnyAtlas = new TextureAtlas(Gdx.files.internal("data/basedBunny.atlas"));
-		animation = new Animation(1/15f, bunnyAtlas.getRegions());
+		
 		
 		Gdx.input.setInputProcessor(new GestureDetector(this));
 	}
@@ -43,8 +43,7 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	@Override
 	public void dispose() {
 		batch.dispose();
-		texture.dispose();
-		bunnyAtlas.dispose();
+
 	}
 
 	@Override
@@ -56,8 +55,7 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 		
 		batch.begin();
 		//sprite.draw(batch);
-		elapsedTime += Gdx.graphics.getDeltaTime();
-		batch.draw(animation.getKeyFrame(elapsedTime, true), (-75+Gdx.graphics.getWidth())/2, 0);
+		//batch.draw(, (-75+Gdx.graphics.getWidth())/2, 0);
 		batch.end();
 	}
 
