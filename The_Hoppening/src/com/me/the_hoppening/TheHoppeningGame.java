@@ -15,6 +15,7 @@ import com.badlogic.gdx.input.GestureDetector;
 import com.badlogic.gdx.input.GestureDetector.GestureListener;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.me.the_hoppening.actors.BunnyActor;
 
 
 public class TheHoppeningGame implements ApplicationListener, GestureListener {
@@ -27,7 +28,7 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	
 	@Override
 	public void create() {
-		camera = new OrthographicCamera(1280, 720);
+		camera = new OrthographicCamera(480, 320);
 		Texture.setEnforcePotImages(false);
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
@@ -39,12 +40,13 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 		batch = new SpriteBatch();
 		
 		
-		Gdx.input.setInputProcessor(new GestureDetector(this));
+		Gdx.input.setInputProcessor(stage);
 	}
 
 	@Override
 	public void dispose() {
 		batch.dispose();
+		stage.dispose();
 
 	}
 
@@ -52,13 +54,9 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	public void render() {		
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		
-		//batch.setProjectionMatrix(camera.combined);
-		
-		batch.begin();
-		//sprite.draw(batch);
-		//batch.draw(, (-75+Gdx.graphics.getWidth())/2, 0);
-		batch.end();
+	
+		stage.act(Gdx.graphics.getDeltaTime());
+	    stage.draw();
 	}
 
 	@Override
