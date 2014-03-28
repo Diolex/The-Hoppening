@@ -33,7 +33,8 @@ public class BunnyActor extends Actor{
 	
 	public BunnyActor(){
 		textureAtlas = new TextureAtlas(Gdx.files.internal("data/basedBunny.atlas"));
-		idleAniR = new Animation(1/15f, textureAtlas.getRegions());
+		idleAniR = new Animation(1/15f,
+				(textureAtlas.findRegions("idle0")));
 		runAniR = new Animation(1/15f, textureAtlas.getRegions());
 		attackAniR = new Animation(1/15f, textureAtlas.getRegions());
 		hitAniR = new Animation(1/15f, textureAtlas.getRegions());
