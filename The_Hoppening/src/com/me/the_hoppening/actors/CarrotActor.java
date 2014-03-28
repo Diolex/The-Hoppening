@@ -10,6 +10,10 @@ public class CarrotActor extends MobActor {
 		
 		
 		idleAni = new Animation(1/15f, textureAtlas.getRegions());
+		runAni = new Animation(1/15f, textureAtlas.getRegions());
+		attackAni = new Animation(1/15f, textureAtlas.getRegions());
+		hitAni = new Animation(1/15f, textureAtlas.getRegions());
+		deadAni = new Animation(1/15f, textureAtlas.getRegions());
 		//setBounds(actorX,actorY,animation.getKeyFrame(elapsedTime,true).getRegionHeight(),
 		//		animation.getKeyFrame(elapsedTime,true).getRegionWidth());	
 	}
