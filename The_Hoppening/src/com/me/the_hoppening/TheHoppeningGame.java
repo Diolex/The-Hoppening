@@ -6,6 +6,8 @@ import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.input.GestureDetector.GestureListener;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -15,22 +17,33 @@ import com.me.the_hoppening.actors.BunnyActor.State;
 
 
 public class TheHoppeningGame implements ApplicationListener, GestureListener {
-	private OrthographicCamera camera;
+	private ParallaxCamera camera;
+	private OrthoCamController controller;
 	private SpriteBatch batch;
-
+	private TextureAtlas bgAtlas;
+	private TextureRegion[] layers;
 
 	//private float elapsedTime = 0;
 	private Stage stage;
 	private BunnyActor bunny;
-	
+
 	@Override
 	public void create() {
-		camera = new OrthographicCamera(480, 320);
 		Texture.setEnforcePotImages(false);
 		
 		stage = new Stage();		
 		BunnyActor bunny = new BunnyActor();
 		stage.addActor(bunny);
+
+		bgAtlas = new TextureAtlas(Gdx.files.internal("data/basedbackground.atlas"));
+		layers = new TextureRegion[3];
+		layers[2] = bgAtlas.findRegion("g1");
+		layers[1] = bgAtlas.findRegion("g2");
+		layers[0] = bgAtlas.findRegion("g3");
+		
+		camera = new ParallaxCamera(480, 320);
+		
+
 		
 		batch = new SpriteBatch();
 		
@@ -42,13 +55,14 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	public void dispose() {
 		batch.dispose();
 		stage.dispose();
-
+		layers[0].getTexture().dispose();
 	}
 
 	@Override
 	public void render() {		
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+		
 		/*if(Gdx.input.getX() > 240 && (bunny.getState() != State.ATTACK_L && bunny.getState() != State.ATTACK_R)  ){
 			bunny.addAction(Actions.moveBy(20, 0));
 			bunny.setState(State.RUN_R);
@@ -58,8 +72,24 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 			bunny.addAction(Actions.moveBy(-20, 0));
 			bunny.setState(State.RUN_L);
 		}*/
+		
+		//batch.disableBlending();
+		batch.begin();
+		batch.draw(layers[0], 0, 320-(int)layers[0].getRegionHeight());
+		batch.end();
+		
+		batch.begin();
+		batch.draw(layers[1], 0, 320-((int)layers[0].getRegionHeight()+layers[1].getRegionHeight()));
+		batch.end();
+		
+		batch.begin();
+		batch.draw(layers[2], 0, 0);
+		batch.end();
+		//batch.enableBlending();
+		
 		stage.act(Gdx.graphics.getDeltaTime());
 	    stage.draw();
+	    
 	}
 
 	@Override

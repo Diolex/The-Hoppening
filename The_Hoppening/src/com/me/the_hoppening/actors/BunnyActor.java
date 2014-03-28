@@ -30,12 +30,12 @@ public class BunnyActor extends Actor{
 	private boolean mutant = false;
 	public enum State {IDLE_R, RUN_R, ATTACK_R, HIT_R, DEAD_R,
 		IDLE_L, RUN_L, ATTACK_L, HIT_L, DEAD_L,}
-	private State state = State.DEAD_R;
+	private State state = State.RUN_R;
 	private int health = 5;
 	private boolean runRight = false;
 	private boolean runLeft = false;
-	float actorX = 0;
-	float actorY = 0;
+	float actorX = 380;
+	float actorY = 20;
 	public BunnyActor(){
 		textureAtlas = new TextureAtlas(Gdx.files.internal("data/basedBunny.atlas"));
 		idleAniR = new Animation(1/6f,
