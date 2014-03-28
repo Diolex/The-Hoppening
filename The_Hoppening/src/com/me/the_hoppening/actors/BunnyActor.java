@@ -15,17 +15,28 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 
 public class BunnyActor extends Actor{
-	private Animation idleAni;
-	private Animation runAni;
-	private Animation attackAni;
-	private Animation hitAni;
-	private Animation deadAni;
+	private Animation idleAniR;
+	private Animation runAniR;
+	private Animation attackAniR;
+	private Animation hitAniR;
+	private Animation deadAniR;
+	private Animation idleAniL;
+	private Animation runAniL;
+	private Animation attackAniL;
+	private Animation hitAniL;
+	private Animation deadAniL;
 	private TextureAtlas textureAtlas;
 	private float elapsedTime = 0;
 	private boolean mutant = false;
+<<<<<<< HEAD
 	private boolean isLeft = false;
 	public enum State {IDLE, RUN, ATTACK, HIT, DEAD}
 	private State state = State.RUN;
+=======
+	private enum State {IDLE_R, RUN_R, ATTACK_R, HIT_R, DEAD_R,
+						IDLE_L, RUN_L, ATTACK_L, HIT_L, DEAD_L,}
+	private State state = State.DEAD_R;
+>>>>>>> aeb76342d1868d3b95a56609540926965c36e3a0
 	private int health = 5;
 	private boolean runRight = false;
 	private boolean runLeft = false;
@@ -33,31 +44,109 @@ public class BunnyActor extends Actor{
 	float actorY = 0;
 	public BunnyActor(){
 		textureAtlas = new TextureAtlas(Gdx.files.internal("data/basedBunny.atlas"));
-		idleAni = new Animation(1/15f, textureAtlas.getRegions());
-		runAni = new Animation(1/15f, textureAtlas.getRegions());
-		attackAni = new Animation(1/15f, textureAtlas.getRegions());
-		hitAni = new Animation(1/15f, textureAtlas.getRegions());
-		deadAni = new Animation(1/15f, textureAtlas.getRegions());
-		setBounds(actorX,actorY,idleAni.getKeyFrame(elapsedTime,true).getRegionHeight(),
-				idleAni.getKeyFrame(elapsedTime,true).getRegionWidth());
+		idleAniR = new Animation(1/6f,
+				(textureAtlas.findRegion("right/idle0")),
+				(textureAtlas.findRegion("right/idle1")),
+				(textureAtlas.findRegion("right/idle2")),
+				(textureAtlas.findRegion("right/idle3")),
+				(textureAtlas.findRegion("right/idle4")),
+				(textureAtlas.findRegion("right/idle5")));
+		runAniR = new Animation(1/10f,
+				(textureAtlas.findRegion("right/run0")),
+				(textureAtlas.findRegion("right/run1")),
+				(textureAtlas.findRegion("right/run2")),
+				(textureAtlas.findRegion("right/run3")));
+		attackAniR = new Animation(1/6f,
+				(textureAtlas.findRegion("right/attack0")),
+				(textureAtlas.findRegion("right/attack1")),
+				(textureAtlas.findRegion("right/attack2")));
+		hitAniR = new Animation(1/10f,
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("right/hit0")));
+		deadAniR = new Animation(1/10f,
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("left/hit0")));
+		
+		idleAniL = new Animation(1/6f,
+				(textureAtlas.findRegion("left/idle0")),
+				(textureAtlas.findRegion("left/idle1")),
+				(textureAtlas.findRegion("left/idle2")),
+				(textureAtlas.findRegion("left/idle3")),
+				(textureAtlas.findRegion("left/idle4")),
+				(textureAtlas.findRegion("left/idle5")));
+		runAniL = new Animation(1/10f,
+				(textureAtlas.findRegion("left/run0")),
+				(textureAtlas.findRegion("left/run1")),
+				(textureAtlas.findRegion("left/run2")),
+				(textureAtlas.findRegion("left/run3")));
+		attackAniL = new Animation(1/6,
+				(textureAtlas.findRegion("left/attack0")),
+				(textureAtlas.findRegion("left/attack1")),
+				(textureAtlas.findRegion("left/attack2")));
+		hitAniL = new Animation(1/10f,
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("left/hit0")));
+		deadAniL = new Animation(1/10f,
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("left/hit0")),
+				(textureAtlas.findRegion("right/hit0")),
+				(textureAtlas.findRegion("right/hit0")));
+		setBounds(actorX,actorY,idleAniR.getKeyFrame(elapsedTime,true).getRegionHeight(),
+				idleAniR.getKeyFrame(elapsedTime,true).getRegionWidth());
 	}
 	
 	@Override
 	public void draw(SpriteBatch batch, float alpha){
 		TextureRegion frame;
 		switch (state){
-		case IDLE: //TODO
-			frame = idleAni.getKeyFrame(elapsedTime, true);
-		case RUN: //TODO
-			frame = runAni.getKeyFrame(elapsedTime, true);
-		case ATTACK: //TODO
-			frame = attackAni.getKeyFrame(elapsedTime, false);
-		case HIT: //TODO
-			frame = hitAni.getKeyFrame(elapsedTime, false);
-		default:  //TODO DEAD
-			frame = deadAni.getKeyFrame(elapsedTime, false);
+		case IDLE_R: 
+			frame = idleAniR.getKeyFrame(elapsedTime, true);
+			break;
+		case IDLE_L: 
+			frame = idleAniL.getKeyFrame(elapsedTime, true);
+			break;
+		case RUN_R: 
+			frame = runAniR.getKeyFrame(elapsedTime, true);
+			break;
+		case RUN_L: 
+			frame = runAniL.getKeyFrame(elapsedTime, true);
+			break;
+		case ATTACK_R: 
+			frame = attackAniR.getKeyFrame(elapsedTime, true);
+			break;
+		case ATTACK_L: 
+			frame = attackAniL.getKeyFrame(elapsedTime, true);
+			break;
+		case HIT_R: 
+			frame = hitAniR.getKeyFrame(elapsedTime, true);
+			break;
+		case HIT_L: 
+			frame = hitAniL.getKeyFrame(elapsedTime, true);
+			break;
+		case DEAD_R: 
+			frame = deadAniR.getKeyFrame(elapsedTime, true);
+			break;
+		default:  
+			frame = deadAniL.getKeyFrame(elapsedTime, true);
+			break;
 		}
-		//if(isLeft) frame.flip(true,false);
+
 		batch.draw(frame, actorX, actorY);
 	}
 	
