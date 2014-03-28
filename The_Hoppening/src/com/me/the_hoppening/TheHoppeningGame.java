@@ -27,13 +27,15 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	
 	@Override
 	public void create() {
-	    stage = new Stage();
 		camera = new OrthographicCamera(1280, 720);
 		Texture.setEnforcePotImages(false);
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
+
+		stage = new Stage();		
+		BunnyActor bunny = new BunnyActor();
+		stage.addActor(bunny);
 		
-		//camera = new OrthographicCamera(1, h/w);
 		batch = new SpriteBatch();
 		
 		

@@ -26,4 +26,12 @@ public class BunnyActor extends Actor{
 		elapsedTime += Gdx.graphics.getDeltaTime();
 		batch.draw(animation.getKeyFrame(elapsedTime, true), actorX, actorY);
 	}
+	
+	@Override
+	public void act(float delta){
+		elapsedTime += delta;
+		if(started){
+			actorX+=5;
+		}
+	}
 }
