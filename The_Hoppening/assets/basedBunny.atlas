@@ -38,7 +38,7 @@ left/idle0
   orig: 75, 75
   offset: 0, 0
   index: -1
-left/idle6
+left/idle3
   rotate: false
   xy: 310, 2
   size: 75, 75
@@ -52,7 +52,7 @@ left/idle2
   orig: 75, 75
   offset: 0, 0
   index: -1
-left/idle3
+left/idle6
   rotate: false
   xy: 310, 2
   size: 75, 75
@@ -120,14 +120,14 @@ mutantbunny/attack0
   orig: 75, 85
   offset: 0, 0
   index: -1
-mutantbunny/attack1
+mutantbunny/attack2
   rotate: false
   xy: 2, 2
   size: 75, 85
   orig: 75, 85
   offset: 0, 0
   index: -1
-mutantbunny/attack2
+mutantbunny/attack1
   rotate: false
   xy: 2, 2
   size: 75, 85
@@ -394,6 +394,13 @@ right/idle0
   orig: 75, 75
   offset: 0, 0
   index: -1
+right/idle6
+  rotate: false
+  xy: 310, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
 right/idle3
   rotate: false
   xy: 310, 2
@@ -402,13 +409,6 @@ right/idle3
   offset: 0, 0
   index: -1
 right/idle2
-  rotate: false
-  xy: 310, 2
-  size: 75, 75
-  orig: 75, 75
-  offset: 0, 0
-  index: -1
-right/idle6
   rotate: false
   xy: 310, 2
   size: 75, 75
