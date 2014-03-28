@@ -12,6 +12,7 @@ import com.badlogic.gdx.input.GestureDetector.GestureListener;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
+import com.badlogic.gdx.scenes.scene2d.actions.MoveToAction;
 import com.me.the_hoppening.actors.BunnyActor;
 import com.me.the_hoppening.actors.BunnyActor.State;
 
@@ -106,7 +107,11 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 
 	@Override
 	public boolean touchDown(float x, float y, int pointer, int button) {
-		// TODO Auto-generated method stub
+		MoveToAction move = new MoveToAction();
+		move.setPosition(x, 20f);
+		move.setDuration(5f);
+		bunny.addAction(move);
+		Gdx.app.log("STATUS", "Moved");
 		return false;
 	}
 
