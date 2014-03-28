@@ -109,9 +109,9 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	public boolean touchDown(float x, float y, int pointer, int button) {
 		MoveToAction move = new MoveToAction();
 		move.setPosition(x, 20f);
-		move.setDuration(5f);
+		move.setDuration(1f);
 		bunny.addAction(move);
-		Gdx.app.log("STATUS", "Moved");
+		Gdx.app.log("STATUS", "moved bunny");
 		return false;
 	}
 
