@@ -1,0 +1,145 @@
+
+basedBunny.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+attack0
+  rotate: false
+  xy: 206, 156
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+fight1
+  rotate: false
+  xy: 206, 156
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+attack1
+  rotate: false
+  xy: 206, 79
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+fight2
+  rotate: false
+  xy: 206, 79
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+attack2
+  rotate: false
+  xy: 283, 156
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+fight3
+  rotate: false
+  xy: 283, 156
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+hit
+  rotate: false
+  xy: 283, 79
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+hit0
+  rotate: false
+  xy: 283, 79
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+idle0
+  rotate: false
+  xy: 360, 156
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+idle2
+  rotate: false
+  xy: 360, 156
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+idle7
+  rotate: false
+  xy: 360, 156
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+idle6
+  rotate: false
+  xy: 360, 156
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+idle3
+  rotate: false
+  xy: 360, 156
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+idle1
+  rotate: false
+  xy: 360, 79
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+idle4
+  rotate: false
+  xy: 206, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+idle5
+  rotate: false
+  xy: 283, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+run0
+  rotate: false
+  xy: 2, 131
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+run1
+  rotate: false
+  xy: 2, 29
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+run2
+  rotate: false
+  xy: 104, 131
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+run3
+  rotate: false
+  xy: 104, 29
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1

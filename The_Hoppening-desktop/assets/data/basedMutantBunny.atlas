@@ -1,0 +1,82 @@
+
+basedMutantBunny.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+attack0
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+attack2
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+attack1
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+hit0
+  rotate: false
+  xy: 79, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+idle0
+  rotate: false
+  xy: 156, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+idle1
+  rotate: false
+  xy: 233, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+idle2
+  rotate: false
+  xy: 310, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+idle3
+  rotate: false
+  xy: 387, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+idle4
+  rotate: false
+  xy: 464, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+idle5
+  rotate: false
+  xy: 541, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+idle6
+  rotate: false
+  xy: 618, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
