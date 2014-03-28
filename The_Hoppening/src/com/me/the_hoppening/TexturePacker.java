@@ -16,6 +16,9 @@ public class TexturePacker {
     	TexturePacker2.process("assets/unpacked/projectile/", "../The_Hoppening-desktop/assets/data/", "basedprojectile");
     	TexturePacker2.process("assets/unpacked/projectile/", "../The_Hoppening-android/assets/data/", "basedprojectile");
 
+    	TexturePacker2.process("assets/unpacked/background/", "assets/", "basedbackground");
+    	TexturePacker2.process("assets/unpacked/background/", "../The_Hoppening-desktop/assets/data/", "basedbackground");
+    	TexturePacker2.process("assets/unpacked/background/", "../The_Hoppening-android/assets/data/", "basedbackground");
 
     }
 }
