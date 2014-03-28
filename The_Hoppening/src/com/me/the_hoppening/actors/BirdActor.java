@@ -20,7 +20,7 @@ public class BirdActor extends MobActor {
 		hitAniL = new Animation(1/15f, textureAtlas.getRegions());
 		deadAniL = new Animation(1/15f, textureAtlas.getRegions());
 
-		//setBounds(actorX,actorY,animation.getKeyFrame(elapsedTime,true).getRegionHeight(),
-		//		animation.getKeyFrame(elapsedTime,true).getRegionWidth());	
+		setBounds(actorX,actorY,idleAniR.getKeyFrame(elapsedTime,true).getRegionHeight(),
+				idleAniR.getKeyFrame(elapsedTime,true).getRegionWidth());	
 	}
 }
