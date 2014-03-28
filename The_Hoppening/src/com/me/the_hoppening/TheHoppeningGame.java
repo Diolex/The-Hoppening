@@ -49,13 +49,13 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	public void render() {		
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		if(Gdx.input.getX() > 240 && bunny.state =  ){
+		if(Gdx.input.getX() > 240 && (bunny.getState() != State.ATTACK_L && bunny.getState() != State.ATTACK_R)  ){
 			bunny.addAction(Actions.moveBy(20, 0));
-			bunny.setState(State.);
+			bunny.setState(State.RUN_R);
 		}
-		else if (Gdx.input.getX() < 240){
+		else if (Gdx.input.getX() < 240 && (bunny.getState() != State.ATTACK_L && bunny.getState() != State.ATTACK_R) ){
 			bunny.addAction(Actions.moveBy(-20, 0));
-			bunny.setState(State.RUN);
+			bunny.setState(State.RUN_L);
 		}
 		stage.act(Gdx.graphics.getDeltaTime());
 	    stage.draw();
@@ -95,7 +95,10 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	public boolean fling(float velocityX, float velocityY, int button) {
 		if(Math.abs(velocityX) < Math.abs(velocityY)){
 			if(velocityY > 20){
-				bunny.setState(State.ATTACK);
+				if( (bunny.getState() == State.ATTACK_L || bunny.getState() == State.RUN_L ) || (bunny.getState() == State.HIT_L || bunny.getState() == State.IDLE_L ))
+					bunny.setState(State.ATTACK_L);
+				if( (bunny.getState() == State.ATTACK_R || bunny.getState() == State.RUN_R ) || (bunny.getState() == State.HIT_R || bunny.getState() == State.IDLE_R ))
+					bunny.setState(State.ATTACK_R);
 			}
 		}
 		return true;
