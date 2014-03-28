@@ -45,14 +45,19 @@ public abstract class MobActor extends Actor{
 		switch (state){
 		case IDLE: //TODO
 			frame = idleAni.getKeyFrame(elapsedTime, true);
+			break;
 		case RUN: //TODO
 			frame = runAni.getKeyFrame(elapsedTime, true);
+			break;
 		case ATTACK: //TODO
 			frame = attackAni.getKeyFrame(elapsedTime, false);
+			break;
 		case HIT: //TODO
 			frame = hitAni.getKeyFrame(elapsedTime, false);
+			break;
 		default:  //TODO DEAD
 			frame = deadAni.getKeyFrame(elapsedTime, false);
+			break;
 		}
 		//if(isLeft) frame.flip(true,false);
 		batch.draw(frame, actorX, actorY);
