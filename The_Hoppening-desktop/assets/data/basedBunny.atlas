@@ -38,13 +38,6 @@ left/idle0
   orig: 75, 75
   offset: 0, 0
   index: -1
-left/idle3
-  rotate: false
-  xy: 310, 2
-  size: 75, 75
-  orig: 75, 75
-  offset: 0, 0
-  index: -1
 left/idle6
   rotate: false
   xy: 310, 2
@@ -53,6 +46,13 @@ left/idle6
   offset: 0, 0
   index: -1
 left/idle2
+  rotate: false
+  xy: 310, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+left/idle3
   rotate: false
   xy: 310, 2
   size: 75, 75
@@ -110,6 +110,252 @@ left/run3
   index: -1
 
 basedBunny2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+mutantbunny/attack0
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/attack1
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/attack2
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/hit0
+  rotate: false
+  xy: 79, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/idle0
+  rotate: false
+  xy: 156, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/idle1
+  rotate: false
+  xy: 233, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/idle2
+  rotate: false
+  xy: 310, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/idle3
+  rotate: false
+  xy: 387, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/idle4
+  rotate: false
+  xy: 464, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/idle5
+  rotate: false
+  xy: 541, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/idle6
+  rotate: false
+  xy: 618, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+
+basedBunny3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+mutantbunny/left/attack0
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/left/attack2
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/left/attack1
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/left/hit0
+  rotate: false
+  xy: 79, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/left/idle0
+  rotate: false
+  xy: 156, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/left/idle1
+  rotate: false
+  xy: 233, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/left/idle2
+  rotate: false
+  xy: 310, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/left/idle3
+  rotate: false
+  xy: 387, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/left/idle4
+  rotate: false
+  xy: 464, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/left/idle5
+  rotate: false
+  xy: 541, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/left/idle6
+  rotate: false
+  xy: 618, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+
+basedBunny4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+mutantbunny/right/attack0
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/right/attack1
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/right/attack2
+  rotate: false
+  xy: 2, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/right/hit0
+  rotate: false
+  xy: 79, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/right/idle0
+  rotate: false
+  xy: 156, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/right/idle1
+  rotate: false
+  xy: 233, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/right/idle2
+  rotate: false
+  xy: 310, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/right/idle3
+  rotate: false
+  xy: 387, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/right/idle4
+  rotate: false
+  xy: 464, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/right/idle5
+  rotate: false
+  xy: 541, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+mutantbunny/right/idle6
+  rotate: false
+  xy: 618, 2
+  size: 75, 85
+  orig: 75, 85
+  offset: 0, 0
+  index: -1
+
+basedBunny5.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
