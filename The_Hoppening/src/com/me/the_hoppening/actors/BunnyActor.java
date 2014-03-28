@@ -28,15 +28,9 @@ public class BunnyActor extends Actor{
 	private TextureAtlas textureAtlas;
 	private float elapsedTime = 0;
 	private boolean mutant = false;
-<<<<<<< HEAD
-	private boolean isLeft = false;
-	public enum State {IDLE, RUN, ATTACK, HIT, DEAD}
-	private State state = State.RUN;
-=======
 	private enum State {IDLE_R, RUN_R, ATTACK_R, HIT_R, DEAD_R,
 						IDLE_L, RUN_L, ATTACK_L, HIT_L, DEAD_L,}
 	private State state = State.DEAD_R;
->>>>>>> aeb76342d1868d3b95a56609540926965c36e3a0
 	private int health = 5;
 	private boolean runRight = false;
 	private boolean runLeft = false;
@@ -161,6 +155,9 @@ public class BunnyActor extends Actor{
 	
 	public int getHealth(){
 		return health;
+	}
+	public State getState(){
+		return state;
 	}
 
 	public boolean handle(Event event) {

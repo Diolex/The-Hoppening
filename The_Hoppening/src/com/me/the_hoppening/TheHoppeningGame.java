@@ -12,9 +12,6 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.me.the_hoppening.actors.BunnyActor;
 import com.me.the_hoppening.actors.BunnyActor.State;
-import com.me.the_hoppening.actors.InoutEvent;
-import com.me.the_hoppening.actors.InputEvent;
-import com.me.the_hoppening.actors.InputListener;
 
 
 public class TheHoppeningGame implements ApplicationListener, GestureListener {
@@ -52,9 +49,9 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	public void render() {		
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		if(Gdx.input.getX() > 240){
+		if(Gdx.input.getX() > 240 && bunny.state =  ){
 			bunny.addAction(Actions.moveBy(20, 0));
-			bunny.setState(State.RUN);
+			bunny.setState(State.);
 		}
 		else if (Gdx.input.getX() < 240){
 			bunny.addAction(Actions.moveBy(-20, 0));
@@ -96,8 +93,12 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 
 	@Override
 	public boolean fling(float velocityX, float velocityY, int button) {
-		// TODO Auto-generated method stub
-		return false;
+		if(Math.abs(velocityX) < Math.abs(velocityY)){
+			if(velocityY > 20){
+				bunny.setState(State.ATTACK);
+			}
+		}
+		return true;
 	}
 
 	@Override
