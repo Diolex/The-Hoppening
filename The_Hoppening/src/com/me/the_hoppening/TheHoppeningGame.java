@@ -49,14 +49,15 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	public void render() {		
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		if(Gdx.input.getX() > 240 && (bunny.getState() != State.ATTACK_L && bunny.getState() != State.ATTACK_R)  ){
+		/*if(Gdx.input.getX() > 240 && (bunny.getState() != State.ATTACK_L && bunny.getState() != State.ATTACK_R)  ){
 			bunny.addAction(Actions.moveBy(20, 0));
 			bunny.setState(State.RUN_R);
 		}
-		else if (Gdx.input.getX() < 240 && (bunny.getState() != State.ATTACK_L && bunny.getState() != State.ATTACK_R) ){
+		else if (Gdx.input.getX() < 240 
+				&& (bunny.getState() != State.ATTACK_L && bunny.getState() != State.ATTACK_R) ){
 			bunny.addAction(Actions.moveBy(-20, 0));
 			bunny.setState(State.RUN_L);
-		}
+		}*/
 		stage.act(Gdx.graphics.getDeltaTime());
 	    stage.draw();
 	}
