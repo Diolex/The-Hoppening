@@ -8,10 +8,10 @@ public class Main {
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
 		cfg.title = "The_Hoppening";
 		cfg.useGL20 = false;
-		cfg.width = 1280;
-		cfg.height = 720;
+		cfg.width = 480;
+		cfg.height = 320;
 		
-		//new LwjglApplication(new TheHoppeningGame(), cfg);
-		new LwjglApplication(new InputDemo4(), cfg);
+		new LwjglApplication(new TheHoppeningGame(), cfg);
+		//new LwjglApplication(new InputDemo4(), cfg);
 	}
 }
