@@ -12,17 +12,23 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Action;
 
 public abstract class MobActor extends Actor{
-	protected Animation idleAni;
-	protected Animation runAni;
-	protected Animation attackAni;
-	protected Animation hitAni;
-	protected Animation deadAni;
+	protected Animation idleAniR;
+	protected Animation runAniR;
+	protected Animation attackAniR;
+	protected Animation hitAniR;
+	protected Animation deadAniR;
+	protected Animation idleAniL;
+	protected Animation runAniL;
+	protected Animation attackAniL;
+	protected Animation hitAniL;
+	protected Animation deadAniL;
 	protected TextureAtlas textureAtlas;
 	protected FileHandle atlasPath;
 	protected float elapsedTime;
 	protected boolean mutant;
 	protected boolean isLeft;
-	protected enum State {IDLE, RUN, ATTACK, HIT, DEAD}
+	protected enum State {IDLE_R, RUN_R, ATTACK_R, HIT_R, DEAD_R,
+		IDLE_L, RUN_L, ATTACK_L, HIT_L, DEAD_L,}
 	protected State state;
 	protected int health;
 	float actorX;
@@ -32,7 +38,7 @@ public abstract class MobActor extends Actor{
 		elapsedTime = 0;
 		mutant = false;
 		isLeft = false;
-		state = State.IDLE;
+		state = State.IDLE_L;
 		health = 5;
 		actorX = 0;
 		actorY = 0;
@@ -43,23 +49,37 @@ public abstract class MobActor extends Actor{
 	public void draw(SpriteBatch batch, float alpha){
 		TextureRegion frame;
 		switch (state){
-		case IDLE: //TODO
-			frame = idleAni.getKeyFrame(elapsedTime, true);
+		case IDLE_R: 
+			frame = idleAniR.getKeyFrame(elapsedTime, true);
 			break;
-		case RUN: //TODO
-			frame = runAni.getKeyFrame(elapsedTime, true);
+		case IDLE_L: 
+			frame = idleAniL.getKeyFrame(elapsedTime, true);
 			break;
-		case ATTACK: //TODO
-			frame = attackAni.getKeyFrame(elapsedTime, false);
+		case RUN_R: 
+			frame = runAniR.getKeyFrame(elapsedTime, true);
 			break;
-		case HIT: //TODO
-			frame = hitAni.getKeyFrame(elapsedTime, false);
+		case RUN_L: 
+			frame = runAniL.getKeyFrame(elapsedTime, true);
 			break;
-		default:  //TODO DEAD
-			frame = deadAni.getKeyFrame(elapsedTime, false);
+		case ATTACK_R: 
+			frame = attackAniR.getKeyFrame(elapsedTime, true);
+			break;
+		case ATTACK_L: 
+			frame = attackAniL.getKeyFrame(elapsedTime, true);
+			break;
+		case HIT_R: 
+			frame = hitAniR.getKeyFrame(elapsedTime, true);
+			break;
+		case HIT_L: 
+			frame = hitAniL.getKeyFrame(elapsedTime, true);
+			break;
+		case DEAD_R: 
+			frame = deadAniR.getKeyFrame(elapsedTime, true);
+			break;
+		default:  
+			frame = deadAniL.getKeyFrame(elapsedTime, true);
 			break;
 		}
-		//if(isLeft) frame.flip(true,false);
 		batch.draw(frame, actorX, actorY);
 	}
 	

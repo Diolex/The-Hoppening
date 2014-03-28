@@ -1,0 +1,190 @@
+
+basedprojectile.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+grenade/stable0
+  rotate: false
+  xy: 2, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+grenade/unstable0
+  rotate: false
+  xy: 54, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+grenade/unstable1
+  rotate: false
+  xy: 106, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+grenade/unstable2
+  rotate: false
+  xy: 158, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+grenade/unstable3
+  rotate: false
+  xy: 210, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+grenade/unstable4
+  rotate: false
+  xy: 262, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+grenade/unstable5
+  rotate: false
+  xy: 314, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+grenade/unstable6
+  rotate: false
+  xy: 366, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+grenade/unstable7
+  rotate: false
+  xy: 418, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+
+basedprojectile2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+vomit/left/intro0
+  rotate: false
+  xy: 2, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/left/intro1
+  rotate: false
+  xy: 23, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/left/intro2
+  rotate: false
+  xy: 44, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/left/stable0
+  rotate: false
+  xy: 65, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/left/unstable0
+  rotate: false
+  xy: 86, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/left/unstable1
+  rotate: false
+  xy: 107, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/left/unstable2
+  rotate: false
+  xy: 128, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/left/unstable3
+  rotate: false
+  xy: 149, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+
+basedprojectile3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+vomit/right/intro0
+  rotate: false
+  xy: 2, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/right/intro1
+  rotate: false
+  xy: 23, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/right/intro2
+  rotate: false
+  xy: 44, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/right/stable0
+  rotate: false
+  xy: 65, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/right/unstable0
+  rotate: false
+  xy: 86, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/right/unstable1
+  rotate: false
+  xy: 107, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/right/unstable2
+  rotate: false
+  xy: 128, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+vomit/right/unstable3
+  rotate: false
+  xy: 149, 2
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
