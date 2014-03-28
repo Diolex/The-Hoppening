@@ -3,143 +3,218 @@ basedBunny.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-attack0
+left/attack0
   rotate: false
-  xy: 206, 156
+  xy: 2, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-fight1
+left/attack1
   rotate: false
-  xy: 206, 156
+  xy: 79, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-attack1
+left/attack2
   rotate: false
-  xy: 206, 79
+  xy: 156, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-fight2
+left/hit0
   rotate: false
-  xy: 206, 79
+  xy: 233, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-attack2
+left/idle0
   rotate: false
-  xy: 283, 156
+  xy: 310, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-fight3
+left/idle3
   rotate: false
-  xy: 283, 156
+  xy: 310, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-hit
+left/idle6
   rotate: false
-  xy: 283, 79
+  xy: 310, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-hit0
+left/idle2
   rotate: false
-  xy: 283, 79
+  xy: 310, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-idle0
+left/idle1
   rotate: false
-  xy: 360, 156
+  xy: 387, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-idle2
+left/idle4
   rotate: false
-  xy: 360, 156
+  xy: 464, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-idle7
+left/idle5
   rotate: false
-  xy: 360, 156
+  xy: 541, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-idle6
+left/run0
   rotate: false
-  xy: 360, 156
+  xy: 618, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-idle3
+left/run1
   rotate: false
-  xy: 360, 156
+  xy: 695, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-idle1
+left/run2
   rotate: false
-  xy: 360, 79
+  xy: 772, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-idle4
+left/run3
   rotate: false
-  xy: 206, 2
+  xy: 849, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-idle5
+
+basedBunny2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+right/attack0
   rotate: false
-  xy: 283, 2
+  xy: 2, 2
   size: 75, 75
   orig: 75, 75
   offset: 0, 0
   index: -1
-run0
+right/attack1
   rotate: false
-  xy: 2, 131
-  size: 100, 100
-  orig: 100, 100
+  xy: 79, 2
+  size: 75, 75
+  orig: 75, 75
   offset: 0, 0
   index: -1
-run1
+right/attack2
   rotate: false
-  xy: 2, 29
-  size: 100, 100
-  orig: 100, 100
+  xy: 156, 2
+  size: 75, 75
+  orig: 75, 75
   offset: 0, 0
   index: -1
-run2
+right/hit0
   rotate: false
-  xy: 104, 131
-  size: 100, 100
-  orig: 100, 100
+  xy: 233, 2
+  size: 75, 75
+  orig: 75, 75
   offset: 0, 0
   index: -1
-run3
+right/idle0
   rotate: false
-  xy: 104, 29
-  size: 100, 100
-  orig: 100, 100
+  xy: 310, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/idle2
+  rotate: false
+  xy: 310, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/idle6
+  rotate: false
+  xy: 310, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/idle3
+  rotate: false
+  xy: 310, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/idle1
+  rotate: false
+  xy: 387, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/idle4
+  rotate: false
+  xy: 464, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/idle5
+  rotate: false
+  xy: 541, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/run0
+  rotate: false
+  xy: 618, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/run1
+  rotate: false
+  xy: 695, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/run2
+  rotate: false
+  xy: 772, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/run3
+  rotate: false
+  xy: 849, 2
+  size: 75, 75
+  orig: 75, 75
   offset: 0, 0
   index: -1
