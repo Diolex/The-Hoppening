@@ -5,13 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.Texture.TextureFilter;
-import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.input.GestureDetector;
 import com.badlogic.gdx.input.GestureDetector.GestureListener;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -30,9 +24,7 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	public void create() {
 		camera = new OrthographicCamera(480, 320);
 		Texture.setEnforcePotImages(false);
-		float w = Gdx.graphics.getWidth();
-		float h = Gdx.graphics.getHeight();
-
+		
 		stage = new Stage();		
 		BunnyActor bunny = new BunnyActor();
 		stage.addActor(bunny);
