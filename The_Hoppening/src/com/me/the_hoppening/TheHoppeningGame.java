@@ -21,7 +21,7 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 
 	//private float elapsedTime = 0;
 	private Stage stage;
-	private BunnyActor bunny = new BunnyActor();
+	private BunnyActor bunny;
 	
 	@Override
 	public void create() {
@@ -29,7 +29,7 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 		Texture.setEnforcePotImages(false);
 		
 		stage = new Stage();		
-		
+		BunnyActor bunny = new BunnyActor();
 		stage.addActor(bunny);
 		
 		batch = new SpriteBatch();
