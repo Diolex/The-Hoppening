@@ -5,21 +5,21 @@ filter: Nearest,Nearest
 repeat: none
 g1
   rotate: false
-  xy: 2, 119
-  size: 684, 85
-  orig: 684, 85
+  xy: 2, 441
+  size: 960, 320
+  orig: 960, 320
   offset: 0, 0
   index: -1
 g2
   rotate: false
-  xy: 2, 44
-  size: 513, 73
-  orig: 513, 73
+  xy: 2, 119
+  size: 720, 320
+  orig: 720, 320
   offset: 0, 0
   index: -1
 g3
   rotate: false
-  xy: 517, 2
+  xy: 2, 2
   size: 342, 115
   orig: 342, 115
   offset: 0, 0

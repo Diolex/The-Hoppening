@@ -394,13 +394,6 @@ right/idle0
   orig: 75, 75
   offset: 0, 0
   index: -1
-right/idle2
-  rotate: false
-  xy: 310, 2
-  size: 75, 75
-  orig: 75, 75
-  offset: 0, 0
-  index: -1
 right/idle6
   rotate: false
   xy: 310, 2
@@ -409,6 +402,13 @@ right/idle6
   offset: 0, 0
   index: -1
 right/idle3
+  rotate: false
+  xy: 310, 2
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+right/idle2
   rotate: false
   xy: 310, 2
   size: 75, 75
