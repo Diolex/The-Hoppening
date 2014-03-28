@@ -3,7 +3,6 @@ package com.me.the_hoppening.actors;
 import java.util.Iterator;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -23,7 +22,6 @@ public abstract class MobActor extends Actor{
 	protected Animation hitAniL;
 	protected Animation deadAniL;
 	protected TextureAtlas textureAtlas;
-	protected FileHandle atlasPath;
 	protected float elapsedTime;
 	protected boolean mutant;
 	protected boolean isLeft;
