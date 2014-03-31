@@ -2,20 +2,29 @@ package com.me.the_hoppening;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.input.GestureDetector;
 import com.badlogic.gdx.input.GestureDetector.GestureListener;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.actions.MoveToAction;
+import com.badlogic.gdx.scenes.scene2d.actions.RotateToAction;
+import com.badlogic.gdx.scenes.scene2d.utils.ActorGestureListener;
+import com.me.the_hoppening.actors.BirdActor;
 import com.me.the_hoppening.actors.BunnyActor;
+import com.me.the_hoppening.actors.ProjectileActor;
 import com.me.the_hoppening.actors.BunnyActor.State;
 
+import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
 
 public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	private ParallaxCamera camera;
@@ -27,15 +36,111 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 	//private float elapsedTime = 0;
 	private Stage stage;
 	private BunnyActor bunny;
+	private BirdActor bird;
 
 	@Override
 	public void create() {
 		Texture.setEnforcePotImages(false);
 		
-		stage = new Stage();		
-		BunnyActor bunny = new BunnyActor();
+		stage = new Stage();
+		bird = new BirdActor();
+		bunny = new BunnyActor();
+		
 		stage.addActor(bunny);
+		stage.addActor(bird);
+		stage.addListener(new ActorGestureListener() {
+	        public boolean longPress (Actor actor, float x, float y) {
+	                System.out.println("long press " + x + ", " + y);
+	                return true;
+	        }
 
+	        public void tap(InputEvent event, float x, float y, int count, int button){
+	        	switch(bunny.getState()){
+	        	case IDLE_R: 
+	        		if(bunny.actorX < 410)
+	        			bunny.setState(State.RUN_R);	
+	    			else
+	    				bunny.setState(State.RUN_L);	
+	    			bunny.elapsedTime = 0;
+	    			break;
+	        	case IDLE_L: 
+	        		if(bunny.actorX > 10)
+	        			bunny.setState(State.RUN_L);	
+	    			else
+	    				bunny.setState(State.RUN_R);	
+	        		bunny.elapsedTime = 0;
+	    			break;
+	        	case RUN_R:
+	        		bunny.setState(State.RUN_L);
+	        		bunny.elapsedTime = 0;
+	        		break;
+	        	default:
+	        		bunny.setState(State.RUN_R);
+	        		bunny.elapsedTime = 0;
+	        		break;
+	        	}
+	        }
+	        
+	        public void fling (InputEvent event, float velocityX, float velocityY, int button) {
+	        	switch (bunny.getState()){
+	        	case IDLE_R:
+	        		ProjectileActor proj = new ProjectileActor(bunny.actorX+20, bunny.actorY+20, velocityX, velocityY);
+	        		
+	        		MoveToAction moveAction = new MoveToAction();
+	        		RotateToAction rotateAction = new RotateToAction();
+	        		moveAction.setPosition(300f, 0f);
+	        		moveAction.setDuration(5f);
+	        		rotateAction.setRotation(90f);
+	        		rotateAction.setDuration(5f);
+	        		proj.addAction(moveAction);
+	        		proj.addAction(rotateAction);
+	        		
+	        		stage.addActor(proj);
+	    			bunny.setState(State.ATTACK_R);
+	    			bunny.elapsedTime = 0;
+	    			break;
+	    		case RUN_R: 
+	    			bunny.setState(State.ATTACK_R);
+	    			bunny.elapsedTime = 0;
+	    			break;
+	    		case IDLE_L: 
+	    			bunny.setState(State.ATTACK_L);
+	    			bunny.elapsedTime = 0;
+	    			break;
+	    		case RUN_L: 
+	    			bunny.setState(State.ATTACK_L);
+	    			bunny.elapsedTime = 0;
+	    			break;
+	    		case ATTACK_R: 
+	    			
+	    			break;
+	    		case ATTACK_L: 
+	    			
+	    			break;
+	    		case HIT_R: 
+	    			
+	    			break;
+	    		case HIT_L: 
+	    			
+	    			break;
+	    		case DEAD_R: 
+	    			
+	    			break;
+	    		default:  
+	   	
+	    			break;
+	    		}
+	        }
+
+	});
+		
+		
+		
+		
+		
+		
+		
+		
 		bgAtlas = new TextureAtlas(Gdx.files.internal("data/basedbackground.atlas"));
 		layers = new TextureRegion[3];
 		layers[2] = bgAtlas.findRegion("g1");
@@ -107,11 +212,11 @@ public class TheHoppeningGame implements ApplicationListener, GestureListener {
 
 	@Override
 	public boolean touchDown(float x, float y, int pointer, int button) {
-		MoveToAction move = new MoveToAction();
+		/*MoveToAction move = new MoveToAction();
 		move.setPosition(x, 20f);
 		move.setDuration(1f);
 		bunny.addAction(move);
-		Gdx.app.log("STATUS", "moved bunny");
+		Gdx.app.log("STATUS", "moved bunny");*/
 		return false;
 	}
 

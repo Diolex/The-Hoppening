@@ -38,8 +38,8 @@ public abstract class MobActor extends Actor{
 		isLeft = false;
 		state = State.IDLE_L;
 		health = 5;
-		actorX = 0;
-		actorY = 0;
+		actorX = 220;
+		actorY = 200;
 		textureAtlas = new TextureAtlas(Gdx.files.internal(path));
 	}
 	

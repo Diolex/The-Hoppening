@@ -5,14 +5,14 @@ filter: Nearest,Nearest
 repeat: none
 g1
   rotate: false
-  xy: 2, 441
+  xy: 2, 646
   size: 960, 320
   orig: 960, 320
   offset: 0, 0
   index: -1
 g2
   rotate: false
-  xy: 2, 119
+  xy: 2, 324
   size: 720, 320
   orig: 720, 320
   offset: 0, 0
@@ -20,7 +20,7 @@ g2
 g3
   rotate: false
   xy: 2, 2
-  size: 342, 115
-  orig: 342, 115
+  size: 480, 320
+  orig: 480, 320
   offset: 0, 0
   index: -1
